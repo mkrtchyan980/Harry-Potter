@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import "../Css/Style.css";
-import User from "./User";
+// import { useEffect } from "react";
 
-function Api() {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((users) => setUsers(users));
-  }, []);
-  return (
-    <div className="info">
-      {users.map((user) => (
-        <User key={user.id} user={user} />
-      ))}
-    </div>
-  );
-}
+import { useState } from "react";
 
-export default Api;
+// export const user = [
+//     useEffect(() => {
+//         fetch("https://hp-api.onrender.com/api/characters")
+//             .then((response) => response.json())
+//             .then((user) => setUsers(user));
+//     }, []),
+// ];
+
+// export default function Posts() {
+//     const [APIData, setAPIData] = useState([])
+//     useEffect(() => {
+//         axios.get(`https://jsonplaceholder.typicode.com/users`)
+//             .then((response) => {
+//                 setAPIData(response.data);
+//             })
+//     }, [])
+// }
